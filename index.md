@@ -1,40 +1,92 @@
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+---
+layout: default
+---
+<section id="intro">
+    
+    <div class="flex-row-between">
+        <h1>{{ site.greetings }}</h1>
+        <button title="Change theme" id="theme-toggle" onclick="modeSwitcher()">
+            <div></div>
+        </button>
+    </div>
+    
+    <div class="head">
+        <p><a><strong>> ABOUT ME </strong></a></p>
+    </div>
 
-### Markdown
+    <div class="bio">
+	    {{ site.description }}
+        <p> My name is Amir and I'm a computer science undergraduate student at Ryerson university.
+        I'm currently searching for an opportunity to grow my knowledge and test my skills! I'm passionate about a variety of computer science fields, including back-end development, cloud systems, computational analysis, and other aspects of the field. 
+        </p>
+    </div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    
+    <div class="head">
+        <resume>
+        <strong>
+            <a href="https://drive.google.com/file/d/1zrPjPByojGGpnhCUGxRJM8ZOyJ1fiTOy/view?usp=sharing">
+                > RESUME </a></strong>
+        </resume>
+    
+    </div>
 
-```markdown
-Syntax highlighted code block
+    <div class="head">
+        <p><strong>
+        <a href="https://github.com/ax00z?tab=repositories">
+            
+            > PROJECTS </a></strong>
+        </p>
+        
+    </div>
 
-# Header 1
-## Header 2
-### Header 3
-# 👋 Hey! I'm Amir
+    <div class="projects"> 
+        
+            <li>
+            <small><a href="https://github.com/ax00z/FinancialAccountVisualizer/">
+                Budget management web app</a>
+            </small>
+            </li>
+            <li>
+            <small>
+                <a href="https://github.com/ax00z/py-whatsappBOT/">
+                Whatsapp auto-reply bot
+                </a>
+            </small>
+            </li>    
+            <li>
+            <small>
+                <a href="https://github.com/ax00z/GUI-calc/">
+                Academic Helper
+                </a>
+            </small>
+            </li>
+        
+    </div>
+    
+    
 
-## 🎓 I'm currently a Computer science undergrad at Ryerson University.
+    <div class="head">
+        <p><a><strong>> Feel free to say Hi! </strong></a></p>
+        <contacts>    
+            <p>
+                <a href="aranjbar@ryerson.ca">
+                Email </a>
+            </p>
+        </contacts>
+        
+        <contacts>
+        
+            <p>
+                <a href="https://github.com/ax00z">
+                Github </a>
+            </p>
+        
+        
+        </contacts>
+        
+        
+    </div>
+    
+</section>
 
-## 💻 I love to apply data visualization to real-life scenarios.
-
-## 🔎 I also like to explore topics relevant to health informatics, visual design and statistics.
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ax00z/ax00z.gthub.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
