@@ -18,7 +18,6 @@ googlewebfonts: family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;
 # URL settings
 url: "ax00z.github.io" # Domain Name of host. [username].github.io for github pages
 permalink: pretty
-baseurl: /wsrepo
 
 
 # local
