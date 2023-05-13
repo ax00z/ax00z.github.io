@@ -1,6 +1,6 @@
-site: Amir's personal website
-title: Amir's personal website
-greetings: hey 👋
+site: Amir's Portfolio
+title: Amir's Portfolio
+greetings: hey
 lang: en-US
 data-theme: dark # default theme "dark" | "light"
 
@@ -10,7 +10,7 @@ author:
   description:
   username: # general username
   github: ax00z # github username
-  email: aranjbar@ryerson.ca # email adress
+  email: a77ranjbar@gmail.com # email adress
 
 # Font Settings
 googlewebfonts: family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900
@@ -38,6 +38,7 @@ exclude:
   - LICENSE.md
   - README.md
   - CONTRIBUTING.md
+  - About.html
   
 compress_html:
   clippings: all
