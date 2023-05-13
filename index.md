@@ -16,8 +16,9 @@ layout: default
 
     <div class="bio">
 	    {{ site.description }}
-        <p> My name is Amir and I'm a computer science undergraduate student at Ryerson university.
-        I'm currently searching for an opportunity to grow my knowledge and test my skills! I'm passionate about a variety of computer science fields, including back-end development, cloud systems, computational analysis, and other aspects of the field. 
+        <p> I am a computer science student currently pursuing a Bachelor of Science degree at Toronto Metropolitan University. With experience in full-stack development and a passion for software engineering, I have designed, developed, and implemented software solutions
+for both the front-end and back-end of various platforms. I am highly skilled in programming languages such as
+JavaScript and Python and have expertise in data visualization and analytics.
         </p>
     </div>
 
@@ -25,7 +26,7 @@ layout: default
     <div class="head">
         <resume>
         <strong>
-            <a href="https://drive.google.com/file/d/1zrPjPByojGGpnhCUGxRJM8ZOyJ1fiTOy/view?usp=sharing">
+            <a href="">
                 > RESUME </a></strong>
         </resume>
     
