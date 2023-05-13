@@ -11,7 +11,7 @@ layout: default
     </div>
     
     <div class="head">
-        <p><a><strong>> ABOUT ME </strong></a></p>
+        <p><a><strong>ABOUT ME</strong></a></p>
     </div>
 
     <div class="bio">
@@ -19,8 +19,8 @@ layout: default
         <p> I am a computer science student currently pursuing a Bachelor of Science degree at Toronto Metropolitan University. With experience in
 		full-stack development and a passion for software engineering.
 		I have designed, developed, and implemented software solutions for both the front-end and back-end of various platforms. I am
-		highly skilled in programming languages such as Python, SQL, and JavaScript. I also have expertise in data analytics and database
-		management.
+		proficient in Python, SQL, and JavaScript. I also have expertise in data analytics and database
+		management. More details are available in my resume.
         </p>
     </div>
 
@@ -29,7 +29,7 @@ layout: default
         <resume>
         <strong>
             <a href="">
-                > RESUME </a></strong>
+                RESUME</a></strong>
         </resume>
     
     </div>
@@ -38,7 +38,7 @@ layout: default
         <p><strong>
         <a href="https://github.com/ax00z?tab=repositories">
             
-            > PROJECTS </a></strong>
+        PROJECTS </a></strong>
         </p>
         
     </div>
@@ -70,19 +70,19 @@ layout: default
     
 
     <div class="head">
-        <p><a><strong>> Feel free to say Hi! </strong></a></p>
+        <p><a><strong>Links</strong></a></p>
         <contacts>    
             <p>
-                <a href="aranjbar@ryerson.ca">
+                <a href="a77ranjbar@gmail.com">
                 Email </a>
             </p>
         </contacts>
         
-        <contacts>
+	    <contacts>
         
             <p>
-                <a href="https://github.com/ax00z">
-                Github </a>
+                <a href="https://www.linkedin.com/in/amir-ranjbar/">
+                Linkedin </a>
             </p>
         
         
