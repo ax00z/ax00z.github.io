@@ -16,9 +16,7 @@ layout: default
 
     <div class="bio">
 	    {{ site.description }}
-        <p> I am a computer science student currently pursuing a Bachelor of Science degree at Toronto Metropolitan University. With experience in full-stack development and a passion for software engineering, I have designed, developed, and implemented software solutions
-for both the front-end and back-end of various platforms. I am highly skilled in programming languages such as
-JavaScript and Python and have expertise in data visualization and analytics.
+        <p> I am a computer science student currently pursuing a Bachelor of Science degree at Toronto Metropolitan University. With experience in full-stack development and a passion for software engineering, I have designed, developed, and implemented software solutions for both the front-end and back-end of various platforms. I am highly skilled in programming languages such as Python, SQL, and JavaScript. I also have expertise in data analytics and database management.
         </p>
     </div>
 
