@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 5);
+
+const formatDate = (dateStr: string) =>
+  new Date(dateStr).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+---
+
+<BaseLayout title="Amir Ranjbar">
+  <section class="hero">
+    <p class="hero-greeting">Hi, I'm Amir</p>
+    <h1>Software engineer building things and writing about it</h1>
+    <p class="hero-bio">
+      CS graduate based in Toronto. I write about what I'm learning, what I'm building,
+      and navigating the early career job search. Currently focused on sharpening my
+      fundamentals and shipping projects.
+    </p>
+    <div class="hero-links">
+      <a href="https://github.com/ax00z" target="_blank" rel="noopener">
+        ↗ GitHub
+      </a>
+      <a href="https://linkedin.com/in/amir-ranjbar" target="_blank" rel="noopener">
+        ↗ LinkedIn
+      </a>
+      <a href="mailto:a77ranjbar@gmail.com">
+        ↗ Email
+      </a>
+    </div>
+  </section>
+
+  <section class="mt-section">
+    <div class="section-label">Recent writing</div>
+    <div class="post-list">
+      {posts.map(post => (
+        <a href={`/blog/${post.slug}/`} class="post-item">
+          <span class="post-title">{post.data.title}</span>
+          <span class="post-date">{formatDate(post.data.date)}</span>
+        </a>
+      ))}
+    </div>
+    <p style="margin-top: 1rem;">
+      <a href="/blog/" style="font-family: var(--font-mono); font-size: 0.8rem;">All posts →</a>
+    </p>
+  </section>
+
+  <section class="mt-section mb-section">
+    <div class="section-label">Selected projects</div>
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-card-header">
+          <h3>Feather Dashboard</h3>
+          <a href="https://github.com/ax00z/Feather" target="_blank" rel="noopener" class="project-link">↗ repo</a>
+        </div>
+        <p>Financial variance tracker that converts raw data streams into visual history. Built for quick insight into spending patterns.</p>
+        <div class="tag-list">
+          <span class="tag">Data Viz</span>
+          <span class="tag">Analytics</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <h3>bye-exif</h3>
+          <a href="https://github.com/ax00z/bye-exif" target="_blank" rel="noopener" class="project-link">↗ repo</a>
+        </div>
+        <p>Containerized tool for stripping EXIF metadata from images. Focused on privacy compliance and clean deployment.</p>
+        <div class="tag-list">
+          <span class="tag">Docker</span>
+          <span class="tag">Security</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <h3>Media Automation</h3>
+          <a href="https://github.com/ax00z/Now-" target="_blank" rel="noopener" class="project-link">↗ repo</a>
+        </div>
+        <p>Browser tool that streamlines media consumption workflow. Solves the stream-vs-download friction point.</p>
+        <div class="tag-list">
+          <span class="tag">Node.js</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 1rem;">
+      <a href="/projects/" style="font-family: var(--font-mono); font-size: 0.8rem;">All projects →</a>
+    </p>
+  </section>
+</BaseLayout>
