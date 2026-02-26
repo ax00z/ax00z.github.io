@@ -4,9 +4,6 @@ export default defineConfig({
   site: 'https://ax00z.github.io',
   output: 'static',
   markdown: {
-    shikiConfig: {
-      theme: 'github-dark',
-      wrap: true,
-    },
+    shikiConfig: { theme: 'github-dark', wrap: true },
   },
 });

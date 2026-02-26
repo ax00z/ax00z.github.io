@@ -1,134 +1,84 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout title="Projects" description="Things I've built — side projects, tools, and experiments.">
-  <header class="page-header">
+<BaseLayout title="Projects">
+  <header class="pg-head">
     <h1>Projects</h1>
-    <p class="subtitle">
-      Things I've built or contributed to. Some are finished, some are ongoing.
-    </p>
+    <p class="sub">What I'm building. Focus on data analysis, visualization, and investigative tooling.</p>
   </header>
 
   <section>
-    <div class="project-grid">
-      <div class="project-card">
-        <div class="project-card-header">
-          <h3>Feather Dashboard</h3>
-          <a href="https://github.com/ax00z/Feather" target="_blank" rel="noopener" class="project-link">↗ repo</a>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <div class="proj-card-top">
+          <h3>Asset Radar</h3>
+          <span class="status status-active">Active</span>
         </div>
         <p>
-          Visual dashboard for tracking financial variance. Converts raw data streams
-          into actionable charts and visual history. Built to give quick insight into
-          spending patterns without needing a full accounting setup.
+          Portfolio intelligence dashboard that aggregates financial data across accounts,
+          tracks allocation drift over time, and flags statistical anomalies. The idea came from
+          wanting a single view of everything without relying on tools that oversimplify or
+          lock data behind paywalls. Backend handles ingestion and normalization in Python,
+          frontend renders interactive D3 charts in React.
         </p>
-        <div class="tag-list">
-          <span class="tag">Data Viz</span>
-          <span class="tag">Analytics</span>
-          <span class="tag">JavaScript</span>
+        <div class="tags">
+          <span class="tag">python</span>
+          <span class="tag">react</span>
+          <span class="tag">d3.js</span>
+          <span class="tag">postgresql</span>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-card-header">
-          <h3>bye-exif</h3>
-          <a href="https://github.com/ax00z/bye-exif" target="_blank" rel="noopener" class="project-link">↗ repo</a>
+      <div class="proj-card">
+        <div class="proj-card-top">
+          <h3>Threadline</h3>
+          <span class="status status-soon">In progress</span>
         </div>
         <p>
-          Containerized tool for stripping EXIF metadata from images. Focused on
-          privacy compliance and clean deployment. Run it locally or drop it into
-          a pipeline.
+          Investigative analysis platform designed for law enforcement. Takes large
+          communication datasets — tens of thousands of messages across platforms —
+          and maps entity relationships, communication spikes, and named entities.
+          Built on graph theory and NLP, with a focus on chain-of-custody compliance
+          and air-gapped processing.
         </p>
-        <div class="tag-list">
-          <span class="tag">Docker</span>
-          <span class="tag">Security</span>
-          <span class="tag">Privacy</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-header">
-          <h3>Media Automation</h3>
-          <a href="https://github.com/ax00z/Now-" target="_blank" rel="noopener" class="project-link">↗ repo</a>
-        </div>
-        <p>
-          Browser tool that solves the stream-vs-download friction. Streamlines
-          media consumption workflow so you spend less time managing files.
-        </p>
-        <div class="tag-list">
-          <span class="tag">Node.js</span>
-          <span class="tag">Automation</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-header">
-          <h3>Budget Manager</h3>
-          <a href="https://github.com/ax00z/FinancialAccountVisualizer/" target="_blank" rel="noopener" class="project-link">↗ repo</a>
-        </div>
-        <p>
-          Web app for managing personal budgets with visual breakdowns.
-          Track accounts, categorize spending, and see where money goes.
-        </p>
-        <div class="tag-list">
-          <span class="tag">Full Stack</span>
-          <span class="tag">Finance</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-card-header">
-          <h3>WhatsApp Auto-Reply Bot</h3>
-          <a href="https://github.com/ax00z/py-whatsappBOT/" target="_blank" rel="noopener" class="project-link">↗ repo</a>
-        </div>
-        <p>
-          Python bot for automated WhatsApp responses. Useful for away messages,
-          customer service prototyping, or just messing around with browser automation.
-        </p>
-        <div class="tag-list">
-          <span class="tag">Python</span>
-          <span class="tag">Automation</span>
+        <div class="tags">
+          <span class="tag">next.js</span>
+          <span class="tag">python</span>
+          <span class="tag">NLP</span>
+          <span class="tag">graph theory</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mt-section mb-section">
-    <div class="section-label">Experience</div>
-
-    <div class="exp-entry">
+  <section class="gap-top gap-bot">
+    <div class="section-head">Experience</div>
+    <div class="exp-row">
       <div>
-        <span class="exp-date">May — Sep 2023</span>
-        <span class="exp-company">RWS Group</span>
+        <span class="exp-when">May — Sep 2023</span>
+        <span class="exp-where">RWS Group</span>
       </div>
-      <div class="exp-body">
+      <div class="exp-detail">
         <h3>Process Engineer Intern</h3>
         <ul>
-          <li>Built scripts to automate data cleaning, increasing team throughput by 15%</li>
-          <li>Standardized preprocessing pipelines across 12 languages, cutting manual errors</li>
+          <li>Automated data cleaning pipelines, improved team throughput by 15%</li>
+          <li>Standardized preprocessing across 12 languages</li>
         </ul>
-        <div class="tag-list" style="margin-top: 0.75rem;">
-          <span class="tag">Python</span>
-          <span class="tag">Workflow Automation</span>
-        </div>
+        <div class="tags" style="margin-top:0.6rem;"><span class="tag">python</span><span class="tag">automation</span></div>
       </div>
     </div>
-
-    <div class="exp-entry">
+    <div class="exp-row">
       <div>
-        <span class="exp-date">May — Sep 2022</span>
-        <span class="exp-company">Pyypl</span>
+        <span class="exp-when">May — Sep 2022</span>
+        <span class="exp-where">Pyypl</span>
       </div>
-      <div class="exp-body">
+      <div class="exp-detail">
         <h3>Systems Intern</h3>
         <ul>
-          <li>Standardized dev environments using Docker for consistent system behavior</li>
-          <li>Optimized database queries, reducing load times by 25%</li>
+          <li>Containerized development environments with Docker</li>
+          <li>Optimized database queries, reduced load times by 25%</li>
         </ul>
-        <div class="tag-list" style="margin-top: 0.75rem;">
-          <span class="tag">Docker</span>
-          <span class="tag">PostgreSQL</span>
-        </div>
+        <div class="tags" style="margin-top:0.6rem;"><span class="tag">docker</span><span class="tag">postgresql</span></div>
       </div>
     </div>
   </section>
