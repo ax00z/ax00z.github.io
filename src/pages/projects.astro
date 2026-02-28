@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Projects">
+  <header class="pg-head">
+    <h1>Projects</h1>
+    <p class="sub">What I'm building. Focus on data analysis, visualization, and investigative tooling.</p>
+  </header>
+
+  <section>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <div class="proj-card-top">
+          <h3>Asset Radar</h3>
+          <span class="status status-active">Active</span>
+        </div>
+        <p>
+          Portfolio intelligence dashboard that aggregates financial data across accounts,
+          tracks allocation drift over time, and flags statistical anomalies. The idea came from
+          wanting a single view of everything without relying on tools that oversimplify or
+          lock data behind paywalls. Backend handles ingestion and normalization in Python,
+          frontend renders interactive D3 charts in React.
+        </p>
+        <div class="tags">
+          <span class="tag">python</span>
+          <span class="tag">react</span>
+          <span class="tag">d3.js</span>
+          <span class="tag">postgresql</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card-top">
+          <h3>Threadline</h3>
+          <span class="status status-soon">In progress</span>
+        </div>
+        <p>
+          Investigative analysis platform designed for law enforcement. Takes large
+          communication datasets — tens of thousands of messages across platforms —
+          and maps entity relationships, communication spikes, and named entities.
+          Built on graph theory and NLP, with a focus on chain-of-custody compliance
+          and air-gapped processing.
+        </p>
+        <div class="tags">
+          <span class="tag">next.js</span>
+          <span class="tag">python</span>
+          <span class="tag">NLP</span>
+          <span class="tag">graph theory</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gap-top gap-bot">
+    <div class="section-head">Experience</div>
+    <div class="exp-row">
+      <div>
+        <span class="exp-when">May — Sep 2023</span>
+        <span class="exp-where">RWS Group</span>
+      </div>
+      <div class="exp-detail">
+        <h3>Process Engineer Intern</h3>
+        <ul>
+          <li>Automated data cleaning pipelines, improved team throughput by 15%</li>
+          <li>Standardized preprocessing across 12 languages</li>
+        </ul>
+        <div class="tags" style="margin-top:0.6rem;"><span class="tag">python</span><span class="tag">automation</span></div>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div>
+        <span class="exp-when">May — Sep 2022</span>
+        <span class="exp-where">Pyypl</span>
+      </div>
+      <div class="exp-detail">
+        <h3>Systems Intern</h3>
+        <ul>
+          <li>Containerized development environments with Docker</li>
+          <li>Optimized database queries, reduced load times by 25%</li>
+        </ul>
+        <div class="tags" style="margin-top:0.6rem;"><span class="tag">docker</span><span class="tag">postgresql</span></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

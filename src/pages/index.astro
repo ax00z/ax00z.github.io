@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(p => !p.data.draft)
+  .sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 5);
+
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { timeZone: 'UTC', month:'short', day:'numeric' });
+---
+
+<BaseLayout title="Amir Ranjbar">
+  <section class="hero">
+    <p class="hero-label">Amir Ranjbar</p>
+    <h1>Recent CS graduate. Working with data.</h1>
+    <p class="hero-text">
+      Based in Toronto. Interested in data analysis, pattern recognition, and building
+      tools that make sense of large, unstructured information. Currently shipping projects
+      and writing about the process.
+    </p>
+    <div class="hero-ext">
+      <a href="https://github.com/ax00z" target="_blank" rel="noopener">↗ GitHub</a>
+      <a href="https://linkedin.com/in/amir-ranjbar" target="_blank" rel="noopener">↗ LinkedIn</a>
+      <a href="mailto:a77ranjbar@gmail.com">↗ Email</a>
+    </div>
+  </section>
+
+  <section class="gap-top">
+    <div class="section-head">Recent writing</div>
+    <div class="posts">
+      {posts.map(p => (
+        <a href={`/blog/${p.slug}/`} class="post-row">
+          <span class="post-row-title">{p.data.title}</span>
+          <span class="post-row-date">{fmt(p.data.date)}</span>
+        </a>
+      ))}
+    </div>
+    <p style="margin-top:1.5rem;">
+      <a href="/blog/" style="font-family:var(--font-mono);font-size:0.8rem;">All posts →</a>
+    </p>
+  </section>
+
+  <section class="gap-top gap-bot">
+    <div class="section-head">Current projects</div>
+    <div class="proj-grid">
+      <div class="proj-card">
+        <div class="proj-card-top">
+          <h3>Asset Radar</h3>
+          <span class="status status-active">Active</span>
+        </div>
+        <p>Portfolio intelligence dashboard. Aggregates financial data, tracks allocation drift, and flags anomalies across accounts. Built with Python, React, and D3.</p>
+        <div class="tags">
+          <span class="tag">data analysis</span>
+          <span class="tag">visualization</span>
+          <span class="tag">python</span>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-card-top">
+          <h3>Threadline</h3>
+          <span class="status status-soon">In progress</span>
+        </div>
+        <p>Investigative analysis platform for law enforcement. Processes large communication datasets, maps entity relationships, and surfaces patterns in unstructured text.</p>
+        <div class="tags">
+          <span class="tag">NLP</span>
+          <span class="tag">graph theory</span>
+          <span class="tag">next.js</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).filter(p => !p.data.draft).sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { timeZone: 'UTC', year:'numeric', month:'short', day:'numeric' });
+---
+<BaseLayout title="Blog">
+  <header class="pg-head">
+    <h1>Blog</h1>
+    <p class="sub">Building in public. Notes on data, systems, and whatever I'm working through.</p>
+  </header>
+  <div class="posts gap-bot">
+    {posts.map(p => (
+      <a href={`/blog/${p.slug}/`} class="post-row">
+        <div>
+          <span class="post-row-title">{p.data.title}</span>
+          {p.data.tags && <div class="tags">{p.data.tags.map(t => <span class="tag">{t}</span>)}</div>}
+        </div>
+        <span class="post-row-date">{fmt(p.data.date)}</span>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
