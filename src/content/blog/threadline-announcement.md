@@ -5,7 +5,7 @@ date: "2025-02-23"
 tags: ["threadline", "announcement"]
 ---
 
-While Asset Radar is still in active development, I've started scoping out a second project that's been in my head for a while.
+While Locktrace is still in active development, I've started scoping out a second project that's been in my head for a while.
 
 The premise: when law enforcement builds a case against an individual or a criminal organization, they often end up with enormous communication datasets. We're talking tens of thousands of messages across WhatsApp, Telegram, SMS — extracted from seized devices using forensic tools. The output is typically a massive spreadsheet. And someone has to read it.
 
