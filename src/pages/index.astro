@@ -7,13 +7,13 @@ const posts = (await getCollection('blog'))
   .sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
   .slice(0, 5);
 
-const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { timeZone: 'UTC', month:'short', day:'numeric' });
+const fmt = (d) => new Date(d).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'short', day: 'numeric' });
 ---
 
 <BaseLayout title="Amir Ranjbar">
   <section class="hero">
     <p class="hero-label">Amir Ranjbar</p>
-    <h1>Recent CS graduate. Working with data.</h1>
+    <h1>Software developer. Working with data.</h1>
     <p class="hero-text">
       Based in Toronto. Interested in data analysis, pattern recognition, and building
       tools that make sense of large, unstructured information. Currently shipping projects
@@ -36,9 +36,9 @@ const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { timeZone: '
         </a>
       ))}
     </div>
-    <p style="margin-top:1.5rem;">
-      <a href="/blog/" style="font-family:var(--font-mono);font-size:0.8rem;">All posts →</a>
-    </p>
+    <div class="hero-ext">
+      <a href="/blog/">All posts →</a>
+    </div>
   </section>
 
   <section class="gap-top gap-bot">
@@ -70,30 +70,4 @@ const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { timeZone: '
       </div>
     </div>
   </section>
-</BaseLayout>
-
----
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('blog')).filter(p => !p.data.draft).sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-
-const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { timeZone: 'UTC', year:'numeric', month:'short', day:'numeric' });
----
-<BaseLayout title="Blog">
-  <header class="pg-head">
-    <h1>Blog</h1>
-    <p class="sub">Building in public. Notes on data, systems, and whatever I'm working through.</p>
-  </header>
-  <div class="posts gap-bot">
-    {posts.map(p => (
-      <a href={`/blog/${p.slug}/`} class="post-row">
-        <div>
-          <span class="post-row-title">{p.data.title}</span>
-          {p.data.tags && <div class="tags">{p.data.tags.map(t => <span class="tag">{t}</span>)}</div>}
-        </div>
-        <span class="post-row-date">{fmt(p.data.date)}</span>
-      </a>
-    ))}
-  </div>
 </BaseLayout>
