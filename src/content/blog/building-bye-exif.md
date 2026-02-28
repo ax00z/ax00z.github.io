@@ -5,13 +5,13 @@ date: "2025-02-15"
 tags: ["projects", "docker", "security"]
 ---
 
-I take a photo on my phone, send it to someone, and that image carries a surprising amount of metadata with it — GPS coordinates, device model, timestamps, sometimes even the software version. Most people don't think about this, but it's a real privacy concern, especially if you're posting images publicly.
+I take a photo on my phone, send it to someone, and that image carries a surprising amount of metadata with it. GPS coordinates, device model, timestamps, sometimes even the software version. Most people don't think about this, but it's a real privacy concern, especially if you're posting images publicly.
 
 I wanted a simple tool that strips all of that out. No complicated UI, no cloud service, just a utility I can run locally. That's `bye-exif`.
 
 ## What it does
 
-You give it an image (or a batch of images), it removes all EXIF metadata and spits out clean files. That's it. No GPS data, no camera info, no timestamps. The pixel data stays identical — it only touches the metadata layer.
+You give it an image (or a batch of images), it removes all EXIF metadata and spits out clean files. That's it. No GPS data, no camera info, no timestamps. The pixel data stays identical. It only touches the metadata layer.
 
 ## Technical decisions
 
@@ -32,7 +32,7 @@ Slim base image to keep it light. Mount your image directory as a volume, run th
 
 ## What I learned
 
-**Docker volumes are essential for this use case.** The images live on the host machine, and the container needs to access them without copying everything in. Bind mounts made this clean — the container reads from and writes to a mounted directory, so the workflow is transparent to the user.
+**Docker volumes are essential for this use case.** The images live on the host machine, and the container needs to access them without copying everything in. Bind mounts made this clean. The container reads from and writes to a mounted directory, so the workflow is transparent to the user.
 
 **Metadata is more complex than I expected.** EXIF isn't the only metadata standard. There's also XMP, IPTC, and various maker notes from different camera manufacturers. Pillow handles EXIF well, but for more comprehensive stripping I had to look into `exiftool` as a fallback. The lesson: if you're building a security tool, being thorough matters more than being clever.
 
@@ -40,7 +40,7 @@ Slim base image to keep it light. Mount your image directory as a volume, run th
 
 ## What I'd do differently
 
-If I were building this again, I'd probably add a simple web interface — a drag-and-drop page that strips metadata in the browser using JavaScript's Canvas API. That would remove the Docker dependency entirely for casual users while keeping the containerized version for batch processing.
+If I were building this again, I'd probably add a simple web interface: a drag-and-drop page that strips metadata in the browser using JavaScript's Canvas API. That would remove the Docker dependency entirely for casual users while keeping the containerized version for batch processing.
 
 I'd also add support for video files. Video metadata is a whole separate world, but the privacy concerns are the same.
 
