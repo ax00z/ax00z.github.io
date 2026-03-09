@@ -1,7 +1,7 @@
 ---
 title: "Data pipelines are 80% edge cases"
 description: "What building the Locktrace ingestion layer actually looks like day to day."
-date: "2025-02-14"
+date: "2026-02-19"
 tags: ["locktrace", "data-engineering"]
 ---
 

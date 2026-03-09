@@ -1,7 +1,7 @@
 ---
 title: "Where Locktrace goes from here"
 description: "The current state of the project and what v2 needs to look like."
-date: "2025-02-21"
+date: "2026-02-27"
 tags: ["locktrace", "roadmap"]
 ---
 

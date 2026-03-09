@@ -1,7 +1,7 @@
 ---
 title: "Building bye-exif: a simple privacy tool"
 description: "How I built a containerized EXIF metadata stripper and what I learned about Docker in the process."
-date: "2025-02-15"
+date: "2025-12-08"
 tags: ["projects", "docker", "security"]
 ---
 

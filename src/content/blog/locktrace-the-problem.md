@@ -1,7 +1,7 @@
 ---
 title: "The problem Locktrace is solving"
 description: "Why I'm building a spatial dashboard from scratch for Toronto theft data, and what existing open data portals get wrong."
-date: "2025-02-08"
+date: "2026-02-21"
 tags: ["locktrace", "data-analysis"]
 ---
 

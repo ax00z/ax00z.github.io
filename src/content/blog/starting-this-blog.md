@@ -1,7 +1,7 @@
 ---
 title: "Starting this blog"
 description: "Why I'm writing, what I plan to cover, and where I'm at right now."
-date: "2025-02-25"
+date: "2025-12-04"
 tags: ["career", "personal"]
 ---
 

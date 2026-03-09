@@ -1,7 +1,7 @@
 ---
 title: "D3 is not a charting library"
 description: "Building Locktrace's dashboard, and why D3.js was the right call even when it wasn't easy."
-date: "2025-02-18"
+date: "2026-02-12"
 tags: ["locktrace", "d3", "frontend"]
 ---
 

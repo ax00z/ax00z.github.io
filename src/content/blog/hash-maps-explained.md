@@ -1,8 +1,8 @@
 ---
 title: "Hash maps are everywhere and here's why"
 description: "A practical look at hash tables — how they work under the hood, when to use them, and the gotchas that come up in interviews."
-date: "2025-02-20"
-tags: ["cs-fundamentals", "data-structures"]
+date: "2026-02-20"
+tags: ["cs-fundamentals", "data-structures", "algos", "graph-theory", "threadline"]
 ---
 
 If there's one data structure that keeps showing up — in interviews, in production code, in basically every language's standard library — it's the hash map. And yet a lot of CS graduates (myself included, until recently) treat it as just "the dictionary thing" without really understanding what's happening underneath.

@@ -1,7 +1,7 @@
 ---
 title: "Picking the right architecture (and the wrong one first)"
 description: "Initial architecture decisions for Locktrace, and why I scrapped my first approach."
-date: "2025-02-11"
+date: "2026-02-04"
 tags: ["locktrace", "architecture"]
 ---
 

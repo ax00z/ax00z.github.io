@@ -1,7 +1,7 @@
 ---
 title: "Threadline: four technical problems worth solving"
 description: "Cryptographic chain of custody, deterministic graph theory, air-gapped NLP, and O(1) memory streaming — the foundations of Threadline."
-date: "2025-02-25"
+date: "2026-02-19"
 tags: ["threadline", "architecture", "NLP", "graph-theory"]
 ---
 

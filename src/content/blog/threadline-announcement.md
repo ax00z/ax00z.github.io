@@ -1,7 +1,7 @@
 ---
 title: "New project: Threadline"
 description: "Starting something new: investigative analysis for law enforcement communication data."
-date: "2025-02-23"
+date: "2026-02-07"
 tags: ["threadline", "announcement"]
 ---
 
