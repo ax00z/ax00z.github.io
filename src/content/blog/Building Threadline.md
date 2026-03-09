@@ -6,13 +6,13 @@ tags: ["threadline", "data-analysis", "networkx", "graph-theory", "crime"]
 
 Spreadsheets suck for reading chats. Full stop.
 
-When you’ve got a huge WhatsApp .txt dump, a messy Telegram JSON, or one of those generic CSVs from a forensic tool, opening it in Excel/Google Sheets is torture. You end up scrolling forever, losing track of who’s talking, missing the timeline, and your brain just checks out after 20 minutes. I got sick of it, so I started Threadline. The whole point is to take that raw seized data and spit out something actually usable fast: a searchable message log, who’s who, colors per person, and a quick activity timeline so you see spikes right away.
+When you’ve got a huge .txt dump about conversations and chats amongst people (or a messy Telegram JSON, or one of those generic CSVs from a forensic tool), opening it in Excel/Sheets is torture. You end up scrolling forever, losing track of who’s talking to who and what's going on, missing the timeline, and your brain just checks out after 20 minutes. Since I'm passionate about criminal data analysis, I started Threadline. The whole point is to take that raw seized data and spit out something actually usable. A searchable message log, who’s who, colors/indicators per person, and a quick activity timeline so you see spikes right away.
 
-This isn’t a deep dive on the code or why I picked Svelte + FastAPI. It’s more about the mental side of turning total chaos into something an investigator can actually work with without wanting to throw their monitor out the window.
+It’s more about the mental side of turning total chaos into something an investigator can actually work with without wanting to throw their monitor out the window.
 
 ### The real problem: your brain can only handle so much mess
 
-At first it wasn’t even about writing good code. It was figuring out how to make thousands of random messages feel like a story instead of noise. The machine should do the heavy lifting—sort the timeline, group by sender, highlight weird patterns—so the person reading doesn’t have to fight the file format just to understand what happened when.
+At first it wasn’t even about writing good code. It was figuring out how to make thousands of random messages feel like a story instead of noise. The machine should do the heavy lifting, sort the timeline, group by sender, or highlight weird patterns—so the person reading doesn’t have to fight the file format just to understand what happened when.
 
 ### Parsing giant files without your laptop dying
 
