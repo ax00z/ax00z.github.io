@@ -4,7 +4,7 @@ date: 2026-03-09
 tags: ["threadline", "data-analysis", "networkx", "graph-theory", "crime"]
 ---
 
-Spreadsheets suck for reading chats. Full stop.
+As I already mentioned before, Spreadsheets suck for reading chats. Full stop.
 
 When you’ve got a huge .txt dump about conversations and chats amongst people (or a messy Telegram JSON, or one of those generic CSVs from a forensic tool), opening it in Excel/Sheets is torture. You end up scrolling forever, losing track of who’s talking to who and what's going on, missing the timeline, and your brain just checks out after 20 minutes. Since I'm passionate about criminal data analysis, I started Threadline. The whole point is to take that raw seized data and spit out something actually usable. A searchable message log, who’s who, colors/indicators per person, and a quick activity timeline so you see spikes right away.
 
