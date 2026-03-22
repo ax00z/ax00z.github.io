@@ -1,0 +1,34 @@
+---
+title: "Thoughts on Phases 7 and 8"
+description: "Realized the potential of the stack being used in Threadline"
+date: "2026-03-18"
+tags: ["threadline", "projects", "threat-intel", "graph", "ai", "gliner"]
+---
+
+# I almost ruined threadline with AI...
+
+Phase 7 was supposed to be the big one. I wired in GLiNER for named entity recognition, sentence-transformers for embeddings, semantic search so you could type a vague question and get relevant messages back. The full package. But I thought maybe it would be a good idea to ship some AI features. I mean why wouldn't I?
+
+Here's what actually happened: the installer ballooned. Cold start went from two seconds to twenty while models loaded into memory. The semantic search was a parlor trick. It worked great in demos and fell apart on real chat data full of slang, typos, and jargon. And the entity recognition? My regex pipeline was already catching phones, emails, crypto wallets, coordinates, and money amounts with zero false positives. GLiNER added person and org detection but couldn't stop itself from flagging lol as a Dutch organization.
+
+So I ripped it all out.
+
+---
+
+Not partially. Not "disabled by default." I deleted the modules, removed the dependency group, killed the test files, and cleaned every import that referenced them. The app dropped back to its original weight. Startup was instant again.
+
+The lesson isn't that AI is bad for this kind of tool. It's that I was solving a problem nobody had. The investigators using my app honestly wouldn't care about fuzzy semantic matching. What they need is to `ctrl+F` that actually works across 50,000 messages, a graph that shows them who's connected, and entity extraction that doesn't make things up. Precision matters more than cleverness when your output ends up in court.
+
+---
+
+# Phase 8 was the opposite energy. No new features. Just fixing everything that was slightly off.
+
+The network graph was hiding neighbor nodes when you clicked someone. The exact nodes you'd want to see. The timeline chart had hardcoded dark-mode colors that looked wrong in light theme. The message table was dumping thousands of DOM nodes instead of virtualizing. Brushing across the timeline to select a date range was janky because every mouse move triggered a full chart redraw instead of batching through `requestAnimationFrame`.
+
+# Small stuff individually. 
+
+Btw, I also added session persistence through IndexedDB so closing your tab by accident doesn't lose your work. Capped query results so a `SELECT *` doesn't freeze the browser. Swapped raw HTML injection in the watchlist panel for proper element rendering. Fixed contrast ratios in light mode. Merged duplicate render passes in the graph component. I packaged the whole thing into a portable executable. One folder, double-click the exe, browser opens, you're working.
+
+---
+
+I believe Threadline is more lightweight, more efficient, and more useful now than it was when it had three ML models bolted on. Sometimes the best phase of a project is the one where you take things away.

@@ -1,0 +1,26 @@
+---
+title: "Wrapping up but I might add something (maybe??)"
+description: "I'm thinking of GLiNER..."
+date: "2026-03-18"
+tags: ["threadline", "projects", "threat-intel", "graph"]
+---
+
+
+# Threadline is basically done and done at this point.
+
+
+Threadline is in that familiar project phase where it is supposedly wrapping up, which is often the exact moment someone has one more idea.
+
+In this case, GLiNER.
+
+The core of Threadline seems straightforward enough. It sits in the threat intel / graph / relationship mapping world, which is a polite way of saying it tries to make scattered information behave like a system. Instead of leaving facts, entities, and events floating around in separate documents and tabs, it tries to connect them into something you can actually reason about.
+
+That alone is useful. Most threat intel workflows do not fail because there is no data. They fail because there is too much of it, badly organized, and everyone pretends another platform will fix the problem.
+
+A graph approach at least points in the right direction. It makes relationships visible. It gives context somewhere to live. It helps answer questions beyond “what is this?” and gets closer to “how is this connected?” which is usually the more expensive question.
+
+The GLiNER idea makes sense in that context. If Threadline is already good at connecting things, the obvious next step is getting better at pulling those things out of text in the first place. More reliable entity extraction means less manual cleanup, more structure, and fewer sad little intelligence notes dying in a folder somewhere.
+
+So yes, Threadline may be wrapping up. But in the normal project sense of the phrase: the foundation is there, and now the scope is quietly trying to grow legs again.
+
+That is probably a good sign.
